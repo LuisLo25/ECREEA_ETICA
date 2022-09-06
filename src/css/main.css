@@ -1,0 +1,552 @@
+@charset "UTF-8";
+/* Aquí definimos las Custom properties */
+:root {
+  --negro: #393939;
+  --blanco: #f5f5f5;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana; }
+
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important; } }
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline; }
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block; }
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit; }
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline; }
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none; }
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth; }
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit; }
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+/* Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco); }
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block; }
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block; }
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* opcional */
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale; }
+
+.dashboardEtica {
+  grid-area: Etica-Cumplimiento;
+  display: grid;
+  grid-template-rows: [row-1] 65rem [row-2] 65em [row-3] 65rem [row-4] 65rem [row-5] 65rem [row-6] 65rem [row-7] 65rem [row-8] 65rem [row-9]; }
+
+.dashboardEtica {
+  font-family: 'Helvetica';
+  text-align: center; }
+  .dashboardEtica__primerContenido {
+    background-color: white;
+    color: black; }
+    .dashboardEtica__primerContenido__p {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify; }
+    .dashboardEtica__primerContenido__h1 {
+      padding-top: 10%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 110px;
+      line-height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+  .dashboardEtica__segundoContenido {
+    background-color: black;
+    color: white; }
+    .dashboardEtica__segundoContenido__h2 {
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 92px;
+      display: flex;
+      align-items: center;
+      text-align: center; }
+    .dashboardEtica__segundoContenido__p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 57px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+  .dashboardEtica__rit {
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: black; }
+    .dashboardEtica__rit__checkbox {
+      display: none; }
+    .dashboardEtica__rit__p {
+      display: none;
+      font-family: 'Helvetica';
+      padding-left: 10%;
+      padding-right: 5%;
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 46px;
+      text-align: justify;
+      padding-bottom: 70%; }
+    .dashboardEtica__rit__botonX {
+      padding-top: 10%;
+      cursor: pointer;
+      display: inline-block; }
+    .dashboardEtica__rit__h2 {
+      text-align: start;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 30%; }
+      .dashboardEtica__rit__h2__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 92px; }
+    .dashboardEtica__rit__botonMas {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 30%;
+      /* identical to box height */
+      display: flex;
+      align-items: center; }
+      .dashboardEtica__rit__botonMas__mas {
+        margin-right: 25px; }
+    .dashboardEtica__rit__ImagenRIT {
+      visibility: hidden; }
+      .dashboardEtica__rit__ImagenRIT__imagen {
+        width: 100%;
+        height: 100%; }
+    .dashboardEtica__rit__checkbox:checked ~ *.validar {
+      display: none; }
+      .dashboardEtica__rit__checkbox:checked ~ *.validar__cambio {
+        visibility: visible;
+        display: block; }
+    .dashboardEtica__rit__checkbox:checked ~ .dashboardEtica__rit__cambio {
+      display: none; }
+      .dashboardEtica__rit__checkbox:checked ~ .dashboardEtica__rit__cambio *.validar {
+        display: block; }
+  .dashboardEtica__politicasColaboradoras {
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: black; }
+    .dashboardEtica__politicasColaboradoras__checkbox {
+      display: none; }
+    .dashboardEtica__politicasColaboradoras__p {
+      display: none;
+      font-family: 'Helvetica';
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 46px;
+      text-align: justify;
+      padding-bottom: 70%; }
+    .dashboardEtica__politicasColaboradoras__botonX {
+      padding-top: 10%;
+      cursor: pointer;
+      display: inline-block; }
+    .dashboardEtica__politicasColaboradoras__h2 {
+      text-align: start;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 30%; }
+      .dashboardEtica__politicasColaboradoras__h2__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 92px; }
+    .dashboardEtica__politicasColaboradoras__botonMas {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 30%;
+      /* identical to box height */
+      display: flex;
+      align-items: center; }
+      .dashboardEtica__politicasColaboradoras__botonMas__mas {
+        margin-right: 25px; }
+    .dashboardEtica__politicasColaboradoras__Imagen {
+      visibility: hidden; }
+      .dashboardEtica__politicasColaboradoras__Imagen__imagen {
+        width: 100%;
+        height: 100%; }
+    .dashboardEtica__politicasColaboradoras__checkbox:checked ~ *.validar {
+      display: none; }
+      .dashboardEtica__politicasColaboradoras__checkbox:checked ~ *.validar__cambio {
+        visibility: visible;
+        display: block; }
+    .dashboardEtica__politicasColaboradoras__checkbox:checked ~ .dashboardEtica__politicasColaboradoras__cambio {
+      display: none; }
+      .dashboardEtica__politicasColaboradoras__checkbox:checked ~ .dashboardEtica__politicasColaboradoras__cambio *.validar {
+        display: block; }
+  .dashboardEtica__policitcasComercial {
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: black; }
+    .dashboardEtica__policitcasComercial__checkbox {
+      display: none; }
+    .dashboardEtica__policitcasComercial__p {
+      display: none;
+      font-family: 'Helvetica';
+      padding-left: 10%;
+      padding-right: 5%;
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 46px;
+      text-align: justify;
+      padding-bottom: 70%; }
+    .dashboardEtica__policitcasComercial__botonX {
+      padding-top: 10%;
+      cursor: pointer;
+      display: inline-block; }
+    .dashboardEtica__policitcasComercial__h2 {
+      text-align: start;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 30%; }
+      .dashboardEtica__policitcasComercial__h2__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 92px; }
+    .dashboardEtica__policitcasComercial__botonMas {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 30%;
+      /* identical to box height */
+      display: flex;
+      align-items: center; }
+      .dashboardEtica__policitcasComercial__botonMas__mas {
+        margin-right: 25px; }
+    .dashboardEtica__policitcasComercial__Imagen {
+      visibility: hidden; }
+      .dashboardEtica__policitcasComercial__Imagen__imagen {
+        width: 100%;
+        height: 100%; }
+    .dashboardEtica__policitcasComercial__checkbox:checked ~ *.validar {
+      display: none; }
+      .dashboardEtica__policitcasComercial__checkbox:checked ~ *.validar__cambio {
+        visibility: visible;
+        display: block; }
+    .dashboardEtica__policitcasComercial__checkbox:checked ~ .dashboardEtica__policitcasComercial__cambio {
+      display: none; }
+      .dashboardEtica__policitcasComercial__checkbox:checked ~ .dashboardEtica__policitcasComercial__cambio *.validar {
+        display: block; }
+  .dashboardEtica__politicaConducta {
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: black; }
+    .dashboardEtica__politicaConducta__checkbox {
+      display: none; }
+    .dashboardEtica__politicaConducta__p {
+      display: none;
+      font-family: 'Helvetica';
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 46px;
+      text-align: justify;
+      padding-bottom: 70%; }
+    .dashboardEtica__politicaConducta__botonX {
+      padding-top: 10%;
+      cursor: pointer;
+      display: inline-block; }
+    .dashboardEtica__politicaConducta__h2 {
+      text-align: start;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 30%; }
+      .dashboardEtica__politicaConducta__h2__text {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 92px; }
+    .dashboardEtica__politicaConducta__h3__text {
+      padding-right: 27%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      display: flex;
+      align-items: center; }
+    .dashboardEtica__politicaConducta__botonMas {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 30%;
+      /* identical to box height */
+      display: flex;
+      align-items: center; }
+      .dashboardEtica__politicaConducta__botonMas__mas {
+        margin-right: 25px; }
+    .dashboardEtica__politicaConducta__Imagen {
+      visibility: hidden; }
+      .dashboardEtica__politicaConducta__Imagen__imagen {
+        width: 100%;
+        height: 100%; }
+    .dashboardEtica__politicaConducta__checkbox:checked ~ *.validar {
+      display: none; }
+      .dashboardEtica__politicaConducta__checkbox:checked ~ *.validar__cambio {
+        visibility: visible;
+        display: block; }
+    .dashboardEtica__politicaConducta__checkbox:checked ~ .dashboardEtica__politicaConducta__cambio {
+      display: none; }
+      .dashboardEtica__politicaConducta__checkbox:checked ~ .dashboardEtica__politicaConducta__cambio *.validar {
+        display: block; }
+  .dashboardEtica__crecer {
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: black; }
+    .dashboardEtica__crecer__checkbox {
+      display: none; }
+    .dashboardEtica__crecer__p {
+      display: none;
+      font-family: 'Helvetica';
+      padding-left: 10%;
+      padding-right: 5%;
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 46px;
+      text-align: justify;
+      padding-bottom: 70%; }
+    .dashboardEtica__crecer__botonX {
+      padding-top: 10%;
+      cursor: pointer;
+      display: inline-block; }
+    .dashboardEtica__crecer__h2 {
+      text-align: start;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 30%; }
+      .dashboardEtica__crecer__h2__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 92px; }
+    .dashboardEtica__crecer__botonMas {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 30%;
+      /* identical to box height */
+      display: flex;
+      align-items: center; }
+      .dashboardEtica__crecer__botonMas__mas {
+        margin-right: 25px; }
+    .dashboardEtica__crecer__Imagen {
+      visibility: hidden; }
+      .dashboardEtica__crecer__Imagen__imagen {
+        width: 100%;
+        height: 100%; }
+    .dashboardEtica__crecer__checkbox:checked ~ *.validar {
+      display: none; }
+      .dashboardEtica__crecer__checkbox:checked ~ *.validar__cambio {
+        visibility: visible;
+        display: block; }
+    .dashboardEtica__crecer__checkbox:checked ~ .dashboardEtica__crecer__cambio {
+      display: none; }
+      .dashboardEtica__crecer__checkbox:checked ~ .dashboardEtica__crecer__cambio *.validar {
+        display: block; }
+  .dashboardEtica__cambiar {
+    text-align: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: black; }
+    .dashboardEtica__cambiar__checkbox {
+      display: none; }
+    .dashboardEtica__cambiar__p {
+      display: none;
+      font-family: 'Helvetica';
+      padding-left: 10%;
+      padding-right: 5%;
+      padding-top: 20%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 46px;
+      text-align: justify;
+      padding-bottom: 70%; }
+    .dashboardEtica__cambiar__botonX {
+      padding-top: 10%;
+      cursor: pointer;
+      display: inline-block; }
+    .dashboardEtica__cambiar__h2 {
+      text-align: start;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 30%; }
+      .dashboardEtica__cambiar__h2__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 92px; }
+    .dashboardEtica__cambiar__botonMas {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 30%;
+      /* identical to box height */
+      display: flex;
+      align-items: center; }
+      .dashboardEtica__cambiar__botonMas__mas {
+        margin-right: 25px; }
+    .dashboardEtica__cambiar__Imagen {
+      visibility: hidden; }
+      .dashboardEtica__cambiar__Imagen__imagen {
+        width: 100%;
+        height: auto; }
+    .dashboardEtica__cambiar__checkbox:checked ~ *.validar {
+      display: none; }
+      .dashboardEtica__cambiar__checkbox:checked ~ *.validar__cambio {
+        visibility: visible;
+        display: block; }
+    .dashboardEtica__cambiar__checkbox:checked ~ .dashboardEtica__cambiar__cambio {
+      display: none; }
+      .dashboardEtica__cambiar__checkbox:checked ~ .dashboardEtica__cambiar__cambio *.validar {
+        display: block; }
